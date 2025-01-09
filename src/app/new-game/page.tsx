@@ -19,7 +19,7 @@ export default function UploadGame() {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file.size > 50 * 1024 * 1024) {
+    if (file.size > 1024 * 1024 * 1024) {
       setErrors((prev) => ({
         ...prev,
         file: "El archivo debe ser menor a 50 MB.",
