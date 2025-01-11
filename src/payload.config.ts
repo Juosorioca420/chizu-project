@@ -29,8 +29,8 @@ export default buildConfig({
 
     admin: {
         user: 'users', // Users slug
-        css: path.resolve(__dirname, '../style.css'),
         bundler: webpackBundler(),
+        css: path.resolve(__dirname, '../style.css'),
         meta: {
         titleSuffix: '- Chizu',
         favicon: '/favicon.ico',
