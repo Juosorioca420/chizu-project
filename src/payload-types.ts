@@ -30,6 +30,7 @@ export interface User {
   ordenes?: number | null;
   ordenes_hist?: (string | Order)[] | null;
   lastLogin?: string | null;
+  profilePicture?: number | Media | null;
   updatedAt: string;
   createdAt: string;
   email: string;

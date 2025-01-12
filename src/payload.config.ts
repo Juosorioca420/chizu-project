@@ -14,6 +14,7 @@ import { ProductFiles } from './collections/Products/ProductFile'
 import { Orders } from './collections/Orders'
 import React from 'react'
 import { Comentarios } from './collections/Products/Comentarios'
+import  ProfilePicture from './components/pfp'
 
 dotenv.config({
     path: path.resolve(__dirname, '../.env'),
@@ -29,6 +30,7 @@ export default buildConfig({
 
     admin: {
         user: 'users', // Users slug
+        avatar: ProfilePicture,
         bundler: webpackBundler(),
         css: path.resolve(__dirname, '../style.css'),
         meta: {

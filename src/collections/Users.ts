@@ -741,6 +741,28 @@ export const Users: CollectionConfig = {
         readOnly: true,
       },
     },
+
+    {
+      name: 'profilePicture',
+      label: 'Imagen de Perfil',
+      type: 'upload', 
+      relationTo: 'media', 
+      required: false, 
+      access: {
+        create: () => false, 
+        update: ({ req: { user }, id }) => {
+          if (user?.role === 'admin') {
+            return true; 
+          }
+          return user?.id === id; 
+        },
+        read: () => true, 
+      },
+      admin: {
+        description: 'Sube una imagen para tu perfil. Los administradores pueden modificar cualquier imagen de perfil.',
+      },
+    }
+    
   ],
 
 }
