@@ -1,10 +1,12 @@
-'use client'
-
+"use client"
 import { usePathname } from 'next/navigation'
 
-import { CircleDollarSign, Compass, TextSearch, Instagram, Twitter, Github } from "lucide-react"
+import { CircleDollarSign, HeartHandshake, Compass, TextSearch, Instagram, Twitter, Github } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import SupportButton from "@/components/support/SupportForm"
+import { getServerUser } from '@/lib/payload-utils'
+import { cookies } from 'next/headers'
 
 const Footer = () => {
     const pathname = usePathname()
@@ -143,8 +145,14 @@ const Footer = () => {
                             </div>
                             </div>
                         )}
+                                                            
+                        
+                        <SupportButton/>      
+                                        
+                        
+                                    
                     </div>
-
+                    
                     <div className='mt-0 flex items-center justify-center md:mt-0'>
                         <p className='text-sm text-gray-600'>
                             &copy; {new Date().getFullYear()} All Rights Reserved
