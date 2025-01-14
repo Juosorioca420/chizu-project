@@ -6,6 +6,8 @@ import { AboutCard } from "@/components";
 import { EventContentCard } from "@/components";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ProductReel from "@/components/ProductReel";
+import exp from "constants";
 
 // Definición de tipos
 type AnimationType = "fadeIn" | "slideRight" | "slideLeft" | "zoomIn";
@@ -137,8 +139,8 @@ export const AboutEvent: React.FC = () => {
           variant="lead"
           className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-black-500"
         >
-          Somos una plataforma que impulsa la creatividad, permite la financiación 
-          colaborativa y ofrece un espacio donde los sueños de los creadores se convierten en 
+          Somos una plataforma que impulsa la creatividad, permite la financiación
+          colaborativa y ofrece un espacio donde los sueños de los creadores se convierten en
           experiencias únicas para los jugadores. Aquí apoyas, descubres y juegas como nunca antes 🎮✨
         </Typography>
       </ScrollAnimation>
@@ -333,8 +335,8 @@ export const Faq: React.FC = () => {
               Preguntas Frecuentes
             </Typography>
             <Typography variant="lead" className="mx-auto mb-24 lg:w-3/5 !text-gray-500">
-              Aquí encontrarás respuestas a las preguntas más comunes sobre cómo funciona Chizu, 
-              cómo aprovechar sus herramientas y cómo aseguramos una experiencia confiable para desarrolladores y jugadores. 
+              Aquí encontrarás respuestas a las preguntas más comunes sobre cómo funciona Chizu,
+              cómo aprovechar sus herramientas y cómo aseguramos una experiencia confiable para desarrolladores y jugadores.
               ¡Descubre todo lo que necesitas saber aquí! 😊
             </Typography>
           </div>
@@ -361,6 +363,19 @@ export const Faq: React.FC = () => {
   );
 };
 
+export const Slider: React.FC = () => {
+  return       <ScrollAnimation animation="fadeIn">
+  <div className="container mx-auto flex flex-col items-center px-4 py-10 scroll-mt-10">
+    <ProductReel
+      key={1}
+      title={'Un'}
+      subtitle={'Juegos disponibles'}
+      href={`/products?category=FPS`}
+      query={{ sort: 'desc', limit: 4, category: ["FPS"] }} />
+  </div>
+</ScrollAnimation>
+};
+
 const Page: React.FC = () => {
   return (
     <>
@@ -369,7 +384,8 @@ const Page: React.FC = () => {
       <OurStats />
       <EventContent />
       <Faq />
-      <SponsoredBy />
+      {/* <SponsoredBy /> */}
+      <Slider />
     </>
   );
 };
