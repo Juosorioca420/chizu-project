@@ -5,7 +5,7 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import { ArrowRight, MailPlus, Minus } from "lucide-react"
+import { ArrowLeft, MailPlus, Minus } from "lucide-react"
 import Link from "next/link"
 import {useForm} from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -95,8 +95,8 @@ const Page = ( {searchParams} : PageProps ) => {
                       className: 'gap-1.5',
                     })}
                     href='/sign-in'>
+                    <ArrowLeft className='h-4 w-4' />
                     Recordaste la contraseña? Inicia Sesion
-                    <ArrowRight className='h-4 w-4' />
                   </Link>
                 </div>
       
@@ -133,6 +133,7 @@ const Page = ( {searchParams} : PageProps ) => {
 
                     </div>
                   </form>
+
                 </div>
             
                 </div>

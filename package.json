@@ -18,6 +18,10 @@
     "cliui": "7.0.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.0.3",
     "@heroicons/react": "2.0.18",
     "@hookform/resolvers": "^3.3.4",
@@ -45,6 +49,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "framer-motion": "^11.16.4",
     "lucide-react": "^0.365.0",
     "next": "14.1.4",
     "nodemailer": "^6.9.13",

@@ -72,7 +72,9 @@ export default function Home() {
     </div>
 
 
-    {categories?.map( (category, index) => (
+    
+    <div className="lg:mx-24 md:mx-20 sm:mx-4">
+       {categories?.map( (category, index) => (
           <ProductReel 
               key={index}
               title={category.name ?? 'Estrenos'} 
@@ -81,8 +83,9 @@ export default function Home() {
               query={ { sort: 'desc', limit: 4, category: [category.name] ?? ['UwU Selection'] } } />
         )
       )
-    }
 
+    }
+</div>
 
     {/* "border-t border-gray-200 bg-gray-50" */}
     <div className="lg:mx-24 md:mx-20 sm:mx-4">

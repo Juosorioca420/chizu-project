@@ -25,7 +25,7 @@ const UserNav = ({ user }: { user: User }) => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild className='overflow-visible'>
-            <button  className={`pl-3 font-medium text-left`}>
+        <button  className={`px-4 py-2 font-medium text-left hover:bg-accent rounded-md sm:text-md md:text-sm hover:text-accent-foreground`}>
             Cuenta
             </button>
         </DropdownMenuTrigger>

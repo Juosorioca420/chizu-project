@@ -5,7 +5,7 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import { ArrowRight, TextSearch, CircleDollarSign } from "lucide-react"
+import { ArrowLeft, TextSearch, CircleDollarSign, BookOpenCheck } from "lucide-react"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -91,8 +91,8 @@ const Page = () => {
                   className: 'gap-1.5',
                 })}
                 href='/sign-in'>
+                <ArrowLeft className='h-4 w-4' />
                 Ya estas registrado?  Inicia Sesion
-                <ArrowRight className='h-4 w-4' />
               </Link>
             </div>
 
@@ -183,6 +183,15 @@ const Page = () => {
                       </p>
                     )}
 
+                  </div>
+
+                  <div className='text-right -mb-1'>
+                    <Button variant='ghost' className='text-sm text-semibold text-gray-600'>
+                      <Link className='text-sm text-semibold text-gray-600 flex items-center gap-1.5' href='/activate-user'>
+                        Reactivar Cuenta
+                        <BookOpenCheck className='h-3.5 w-3.5' />
+                      </Link>
+                    </Button>
                   </div>
 
                   <hr className="border-t-8 border-white"></hr>
