@@ -68,7 +68,7 @@ export const authRouter = router({
                 data : {email, password},
                 res : res,
             })
-            payload.logger.info(`Se ha iniciado sesion ${user.username}, ${user.id}`)
+            // payload.logger.info(`Se ha iniciado sesion ${user.username}, ${user.id}`)
             await payload.update( { collection : 'users', id : user.id, data : { lastLogin : new Date().toISOString() } } )
 
             return {success: true}

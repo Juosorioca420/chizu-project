@@ -120,8 +120,8 @@ const Cart = () => {
                     </div>
 
                     <div className='text-center text-l font-semibold text-gray-700'>
-                      Pickachu esta dormido. <br/>
-                      Regresa cuanto el Carrito este lleno.
+                      Pikachu esta dormido. <br/>
+                      Regresa cuando el Carrito este lleno.
                     </div>
 
                     <SheetTrigger asChild>

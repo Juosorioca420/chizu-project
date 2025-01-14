@@ -20,7 +20,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className='bg-white flex-grow-0'>
+        <footer className='bg-[#FCFCFC] flex-grow-0'>
             <div className="lg:mx-24 md:mx-20 sm:mx-4">
                 <div className='border-t border-gray-200'>
 

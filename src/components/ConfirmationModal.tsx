@@ -29,8 +29,8 @@ const ConfirmationModal: FC<ConfirmationModalProps> = ({
           <Button variant="outline" onClick={onCancel}>
             Cancelar
           </Button>
-          <Button onClick={onConfirm}>
-            Continuar
+          <Button className="bg-red-500" onClick={onConfirm}>
+            Eliminar
           </Button>
         </div>
       </div>

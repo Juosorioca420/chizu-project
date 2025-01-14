@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.3",
+    "@heroicons/react": "2.0.18",
     "@hookform/resolvers": "^3.3.4",
+    "@material-tailwind/react": "^2.1.10",
     "@payloadcms/bundler-webpack": "^1.0.6",
     "@payloadcms/db-mongodb": "^1.4.4",
     "@payloadcms/db-postgres": "^0.8.10",
@@ -39,8 +41,6 @@
     "@trpc/server": "^10.45.2",
     "@types/express": "^4.17.21",
     "class-variance-authority": "^0.7.0",
-    "@heroicons/react": "2.0.18",
-    "@material-tailwind/react": "2.1.2",
     "clsx": "^2.1.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
