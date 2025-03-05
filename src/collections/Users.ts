@@ -35,7 +35,7 @@ export const Users: CollectionConfig = {
 
   auth: {
     maxLoginAttempts: 5,
-    tokenExpiration: 3600 * 6, // en segundos
+    tokenExpiration: 3600 * 5, // en segundos
     lockTime: 1000 * 60 * 60 * 2, // en milisegundos
 
     verify: {
@@ -351,6 +351,7 @@ export const Users: CollectionConfig = {
         // Use the token provided to allow your user to reset their password
         const resetPasswordURL = `${process.env.NEXT_PUBLIC_SERVER_URL}/pswd-reset?token=${params?.token}`
 
+        // Return the HTML for the email
         return `
                 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
                 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
